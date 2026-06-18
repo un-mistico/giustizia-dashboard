@@ -41,6 +41,11 @@
     .kpi .lbl{font-size:10px;color:#777;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
     .kpi .trend{font-size:11px;margin-top:6px}
     .trend-up{color:#E07A5F}.trend-down{color:#5B8C5A}.trend-neutral{color:#888}
+    .kpi .badge{display:inline-block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 6px;border-radius:4px;margin-top:6px}
+    .badge-official{background:#1A3A1A;color:#5B8C5A}
+    .badge-estimate{background:#3A2A1A;color:#C9A227}
+    .badge-provisional{background:#1A2A3A;color:#4A6FA5}
+    .badge-outdated{background:#3A1A1A;color:#C45A3D}
     .chart-grid{display:grid;gap:16px;margin-bottom:16px}
     .chart-grid.cols-2{grid-template-columns:1fr 1fr}
     .chart-grid.cols-3{grid-template-columns:1fr 1fr 1fr}
@@ -138,8 +143,9 @@
       <div class="kpi"><div class="val" id="kpi-detenuti">61.861</div><div class="lbl">Detenuti fine 2024</div><div class="trend trend-up">+2,8% vs 2023</div></div>
       
       <div class="kpi">
-        <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Percentuale di procedimenti penali chiusi in archiviazione prima del giudizio. Quasi due denunce su tre non arrivano a sentenza.</span></span>
-        <div class="val red" id="kpi-archiviazioni">~60%</div><div class="lbl">Procedimenti in archiviazione</div><div class="trend trend-neutral">stima su dati 2020-2021</div>
+        <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Stima basata su dati 2020-2021 (Cassazione). Indica quanti procedimenti penali si chiudono in archiviazione prima del giudizio. Dato aggiornato non disponibile in forma aggregata.</span></span>
+        <div class="val red" id="kpi-archiviazioni">~60%</div><div class="lbl">Procedimenti in archiviazione (stima)</div><div class="trend trend-neutral">dati 2020-2021 · aggiornamento aggregato non disponibile</div>
+        <span class="badge badge-outdated">outdated estimate</span>
       </div>
       
       <div class="kpi">
@@ -158,7 +164,7 @@
       <div class="chart-box"><h3>Giudici per 100mila abitanti: Italia vs UE</h3><div class="chart-container"><canvas id="chart-giudici-ue"></canvas></div></div>
     </div>
 
-    <div class="warning-box"><div class="text">In Italia quasi <strong>2,4 milioni di reati</strong> vengono denunciati ogni anno, ma <strong>6 denunce su 10 non arrivano a giudizio</strong>. I processi civili durano in media quasi 6 anni, contro poco più di 2 anni nella media UE. Le carceri sono sovraffollate del 21%. E ci sono circa la metà dei giudici rispetto alla media europea.</div></div>
+    <div class="warning-box"><div class="text">In Italia quasi <strong>2,4 milioni di reati</strong> vengono denunciati ogni anno, ma <strong>6 denunce su 10 non arrivano a giudizio</strong> (archiviazioni stimate 2020-2021). I processi civili durano in media quasi 6 anni, contro poco più di 2 anni nella media UE. Le carceri sono sovraffollate del 21%. E ci sono circa la metà dei giudici rispetto alla media europea — ma il confronto è parziale, perché in Italia i pm fanno anche indagini.</div></div>
 
     <div class="footer-info">ISTAT · Ministero dell'Interno/Viminale · Ministero della Giustizia · CEPEJ · Osservatorio CPI</div>
   </div>
@@ -196,10 +202,20 @@
     <div class="method-box" style="margin-bottom:16px"><p style="margin:0;font-size:13px;color:#aaa;line-height:1.6">Qui si vedono <strong> tempi ed esiti dei processi</strong>. La lentezza non dipende solo dai giudici: conta quanti processi entrano, quanti personale c'è e quanti si chiudono per strada (archiviazioni, patteggiamenti, prescrizioni).</p></div>
     
     <div class="kpi-grid">
-      <div class="kpi"><div class="val red" id="kpi-civile">5,9anni</div><div class="lbl">Processo civile (3 gradi)</div><div class="trend trend-down">da 8 anni (2014) · ma +100% vs UE</div></div>
-      <div class="kpi"><div class="val" id="kpi-penale">2,4anni</div><div class="lbl">Processo penale (3 gradi)</div><div class="trend trend-down">obiettivo PNRR -25% centrato</div></div>
+      <div class="kpi">
+        <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Durata media dei processi civili conclusi fino al terzo grado (tribunale + appello + Cassazione). Fonte: Osservatorio CPI / Ministero Giustizia.</span></span>
+        <div class="val red" id="kpi-civile">5,9anni</div><div class="lbl">Processo civile (3 gradi)</div><div class="trend trend-down">da 8 anni (2014) · ma +100% vs UE</div>
+        <span class="badge badge-official">official / CPI</span>
+      </div>
+      <div class="kpi">
+        <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Durata media dei processi penali conclusi fino al terzo grado. Include tribunale, appello e Cassazione. Fonte: Osservatorio CPI / monitoraggio PNRR.</span></span>
+        <div class="val" id="kpi-penale">2,4anni</div><div class="lbl">Processo penale (3 gradi)</div><div class="trend trend-down">obiettivo PNRR -25% centrato</div>
+        <span class="badge badge-official">official / CPI</span>
+      </div>
       <div class="kpi"><div class="val accent" id="kpi-pendenze">~1,4M</div><div class="lbl">Procedimenti penali pendenti</div><div class="trend trend-down">-5,9% 2024, -3,2% I sem. 2025</div></div>
-      <div class="kpi"><div class="val red" id="kpi-archiviazioni2">~63%</div><div class="lbl">Procedimenti archiviati</div><div class="trend trend-neutral">quasi 2/3 non arrivano a giudizio</div></div>
+      <div class="kpi"><div class="val red" id="kpi-archiviazioni2">~60%</div><div class="lbl">Procedimenti archiviati (stima)</div><div class="trend trend-neutral">dati 2020-2021 · quasi 2/3 non arrivano a giudizio</div>
+        <span class="badge badge-outdated">outdated estimate</span>
+      </div>
     </div>
 
     <div class="chart-grid cols-2">
@@ -213,11 +229,16 @@
     </div>
 
     <div class="method-box">
-      <h4>Perché tante archiviazioni?</h4>
+      <h4>Perché tante archiviazioni e patteggiamenti?</h4>
       <p>Una denuncia può finire in archiviazione per molti motivi: <strong>indagini incomplete, testimoni che ritrattano, reato prescritto, prova insufficiente, o perché l'indagine era fondata su una segnalazione che poi non regge</strong>. Non è automaticamente un "errore" della giustizia, ma un dato importante: molte risorse vengono usate per casi che non arrivano a sentenza.</p>
+      <p><strong>I patteggiamenti sveltiscono i processi</strong>, ma riducono il controllo giudiziale sulla colpevolezza e concentrano il lavoro dei pm nelle trattative anziché nei dibattimenti. Per questo il "tempo di giustizia" può calare senza che più colpevoli vengano condannati.</p>
     </div>
     
-    <div class="footer-info">Ministero della Giustizia · Cassazione · Osservatorio CPI · CEPEJ</div>
+    <div class="method-box" style="margin-top:16px">
+      <h4>Definizioni dei tempi</h4>
+      <p>Per "processo civile/penale (3 gradi)" si intende la durata media dai primi atti fino alla Cassazione, per i procedimenti che arrivano fino in fondo. Molti processi si chiudono prima (patteggiamento, archiviazione, transazione), quindi questa durata non è quella che vive la maggior parte degli utenti. I tempi "al primo grado" sono più brevi.</p>
+    </div>
+    <div class="footer-info">Ministero della Giustizia · Cassazione · Osservatorio CPI · CEPEJ · Percentuali di esito da statistiche giudiziarie (stime)</div>
   </div>
 
   <!-- CARCERI -->
@@ -250,8 +271,8 @@
         <tr><td>Affollamento effettivo</td><td class="num">~134%</td><td class="num">90-100%</td><td>oltre 4.500 posti inagibili</td></tr>
         <tr><td>Detenuti con pena residua < 3 anni</td><td class="num">~38%</td><td class="num">—</td><td>potenziali beneficiari di misure alternative</td></tr>
         <tr><td>Costo medio detenuto / giorno</td><td class="num">~€150-170</td><td class="num">~€100-130 media UE</td><td>stime Antigone/Osservatori; variabile per istituto</td></tr>
-        <tr><td>Suicidi in carcere</td><td class="num">~70-80/anno</td><td class="num">—</td><td>dato che emerge dai rapporti Antigone</td></tr>
-        <tr><td>Tasso di recidiva</td><td class="num">~60-65%</td><td class="num">variabile</td><td>stime DAP; alta correlazione con sovraffollamento e lavoro scarsa</td></tr>
+        <tr><td>Suicidi in carcere</td><td class="num">~70-80/anno</td><td class="num">—</td><td>dato che emerge dai rapporti Antigone; non è un indicatore ufficiale DAP</td></tr>
+        <tr><td>Tasso di recidiva</td><td class="num">non stimato ufficialmente</td><td class="num">—</td><td>I dati pubblici italiani non permettono una stima affidabile; valori circolanti sono stime non verificabili</td></tr>
       </table>
       <p class="note">Fonti: DAP, Antigone, Garante Nazionale, OCSE/CEPEJ. I dati sul costo medio e recidiva sono stime approssimative.</p>
     </div>
@@ -295,10 +316,20 @@
     <div class="method-box" style="margin-bottom:16px"><p style="margin:0;font-size:13px;color:#aaa;line-height:1.6">Questa tab raccoglie <strong>indicatori di efficienza e inefficienza</strong>: quanto costa chiudere un processo, quante pendenze ha ogni magistrato, quanti processi si chiudono inutilmente. Serve per capire dove il sistema perde tempo e soldi.</p></div>
     
     <div class="kpi-grid">
-      <div class="kpi"><div class="val gold" id="kpi-costoprocesso">~€645</div><div class="lbl">Costo medio processo penale</div><div class="trend trend-neutral">media 2017-2019 · forte variabilità per tribunale</div></div>
-      <div class="kpi"><div class="val" id="kpi-pendenze-giudice">~200</div><div class="lbl">Pendenze per giudice civile (stima)</div><div class="trend trend-neutral">vs ~50-80 in paesi più efficienti</div></div>
-      <div class="kpi"><div class="val red" id="kpi-prescrizioni">~15-20%</div><div class="lbl">Processi prescritti (stima)</div><div class="trend trend-neutral">casi che finiscono per scadenza termini</div></div>
-      <div class="kpi"><div class="val" id="kpi-cassazione">~110%</div><div class="lbl">Indice di ricambio Cassazione penale</div><div class="trend trend-down">93% nel 2025 · più entrate che uscite</div></div>
+      <div class="kpi">
+        <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Gli accordi patteggiati riducono il carico processuale, ma sostituiscono il dibattimento con una trattativa accusato-pm. Percentuale stimata sui procedimenti definiti in primo grado.</span></span>
+        <div class="val" id="kpi-patteggiamenti">~18%</div><div class="lbl">Patteggiamenti (stima)</div><div class="trend trend-neutral">deflazione del contenzioso penale</div>
+        <span class="badge badge-estimate">estimate</span>
+      </div>
+      <div class="kpi"><div class="val" id="kpi-pendenze-giudice">~200</div><div class="lbl">Pendenze per giudice civile (stima)</div><div class="trend trend-neutral">vs ~50-80 in paesi più efficienti</div>
+        <span class="badge badge-estimate">estimate</span></div>
+      <div class="kpi">
+        <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Confronto tra magistrati professionali. Attenzione: in Italia pm e giudici sono entrambi magistrati e fanno indagini; in altri paesi i ruoli sono separati e il confronto è parziale.</span></span>
+        <div class="val accent" id="kpi-pm2">3,8</div><div class="lbl">PM per 100mila ab. (Italia)</div><div class="trend trend-neutral">vs ~11 media UE · pm fanno anche indagini</div>
+        <span class="badge badge-official">official</span>
+      </div>
+      <div class="kpi"><div class="val" id="kpi-cassazione">93%</div><div class="lbl">Indice di ricambio Cassazione penale 2025</div><div class="trend trend-down">2024: 110% · più uscite che entrate</div>
+        <span class="badge badge-official">official</span></div>
     </div>
 
     <div class="chart-grid cols-2">
