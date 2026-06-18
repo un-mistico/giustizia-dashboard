@@ -1,0 +1,11 @@
+Indicatore,Definizione,Formula / origine,Fonte primaria,Aggiornamento,Caveat principale
+Reati denunciati,Delitti segnalati all'autorità giudiziaria dalle forze di polizia,Conteggio annuale,Ministero dell'Interno / Viminale,Annuale via Lab24,Denuncia non implica colpevolezza
+Archiviazioni,Procedimenti chiusi senza rinvio a giudizio,Numero archiviazioni / procedimenti esauriti,Cassazione / CSM,Annuale ma dato aggregato lento,Stima su dati 2020-2021; aggiornamento non disponibile
+Patteggiamenti,Accordo accusato-pm con pena ridotta senza dibattimento,Numero patteggiamenti / procedimenti definiti,Cassazione / CSM,Annuale,Riduce carico ma anche controllo giudiziale
+Processo civile (3 gradi),Durata media da primo atto a Cassazione,Tempo medio su casi conclusi in terzo grado,Osservatorio CPI / Ministero Giustizia,Annuale,Solo i casi che arrivano in fondo; la maggior parte si chiude prima
+Processo penale (3 gradi),Durata media da primo atto a Cassazione,Tempo medio su casi conclusi in terzo grado,Osservatorio CPI / Ministero Giustizia,Annuale,Solo i casi che arrivano in fondo
+Pendenze penali,Procedimenti penali aperti e non conclusi,Stock a fine periodo,Ministero Giustizia,Trimestrale,Distingue tra gradi di giudizio
+Affollamento carceri,Detenuti / posti regolamentari × 100,DAP mensili,Ministero Interno / DAP,Mensile,Posti effettivi possono essere meno per inagibilità
+Giudici professionali,Magistrati togati con funzione giudicante,Organico CSM,CSM / Ministero Giustizia,Annuale,In Italia pm e giudici sono entrambi magistrati; confronto UE parziale
+PM professionali,Magistrati togati con funzione accusatoria,Organico CSM,CSM / Ministero Giustizia,Annuale,In Italia fanno anche indagini preliminari
+Spesa giustizia,Totale risorse pubbliche per funzione giustizia,Spesa MEF capitoli giustizia + DAP + Cassazione + CSM,MEF / RGS,Annuale,Include carceri e magistratura; confronti internazionali su definizioni diverse

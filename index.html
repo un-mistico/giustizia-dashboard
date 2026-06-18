@@ -106,6 +106,7 @@
       <div class="tab" data-tab="efficienza">Efficienza</div>
       <div class="tab" data-tab="recap">Recap</div>
       <div class="tab" data-tab="fonti">Fonti</div>
+      <div class="tab" data-tab="dati">Dati</div>
       <div class="tab" data-tab="glossario">Glossario</div>
     </div>
   </div>
@@ -420,6 +421,39 @@
       </ul>
     </div>
     <div class="footer-info">Dati aggiornati al giugno 2026. Verificare sempre le fonti primarie prima di citare cifre in pubblico.</div>
+  </div>
+
+  <!-- DATI -->
+  <div id="dati" class="pane">
+    <div class="method-box" style="margin-bottom:16px">
+      <p style="margin:0;font-size:13px;color:#aaa;line-height:1.6">Dataset CSV usati per i grafici. Ogni file include la fonte e le note per singolo valore. Scarica anche la metodologia per capire come è definito ogni indicatore e dove possono ingannare.</p>
+    </div>
+    <div class="chart-box" style="margin-bottom:16px">
+      <h3>Download dataset</h3>
+      <table class="small-table">
+        <tr><th>File</th><th>Contenuto</th><th class="num">Download</th></tr>
+        <tr><td>reati.csv</td><td>Reati denunciati per tipologia (2019-2024)</td><td class="num"><a href="data/reati.csv" download>CSV</a></td></tr>
+        <tr><td>tempi.csv</td><td>Durata processi civili/penali e pendenze</td><td class="num"><a href="data/tempi.csv" download>CSV</a></td></tr>
+        <tr><td>carceri.csv</td><td>Detenuti, affollamento, pene residue</td><td class="num"><a href="data/carceri.csv" download>CSV</a></td></tr>
+        <tr><td>risorse.csv</td><td>Magistrati, personale, spesa giustizia</td><td class="num"><a href="data/risorse.csv" download>CSV</a></td></tr>
+        <tr><td>esiti.csv</td><td>Esiti stimati dei processi penali</td><td class="num"><a href="data/esiti.csv" download>CSV</a></td></tr>
+        <tr><td>ue_confronto.csv</td><td>Confronto tempi, giudici, spesa UE</td><td class="num"><a href="data/ue_confronto.csv" download>CSV</a></td></tr>
+        <tr><td>metodologia.csv</td><td>Definizioni, formule, fonti e caveat</td><td class="num"><a href="data/metodologia.csv" download>CSV</a></td></tr>
+      </table>
+    </div>
+    
+    <div class="chart-box">
+      <h3>Metodologia indicatori principali</h3>
+      <table class="small-table">
+        <tr><th>Indicatore</th><th>Definizione</th><th>Fonte</th><th>Caveat</th></tr>
+        <tr><td>Reati denunciati</td><td>Delitti segnalati dalle forze di polizia all'autorità giudiziaria</td><td>Ministero Interno / Lab24</td><td>Denuncia ≠ colpa; elaborazione Lab24 su dati Viminale</td></tr>
+        <tr><td>Processo civile (3 gradi)</td><td>Durata media da primo atto a Cassazione</td><td>CPI / Ministero Giustizia</td><td>Solo casi che arrivano in fondo; la maggior parte si chiude prima</td></tr>
+        <tr><td>Archiviazioni</td><td>Procedimenti chiusi senza rinvio a giudizio / esauriti</td><td>Cassazione / CSM</td><td>Stima su dati 2020-2021; aggiornamento aggregato non disponibile</td></tr>
+        <tr><td>Affollamento carceri</td><td>Detenuti / posti regolamentari × 100</td><td>DAP / Antigone</td><td>Posti effettivi possono essere inferiori per inagibilità</td></tr>
+        <tr><td>Giudici / 100mila ab.</td><td>Magistrati togati in funzione giudicante per 100.000 residenti</td><td>CSM / CEPEJ</td><td>Confronto UE parziale: in Italia pm e giudici sono entrambi magistrati</td></tr>
+      </table>
+      <p class="note">Tabella completa in metodologia.csv.</p>
+    </div>
   </div>
 
   <!-- GLOSSARIO -->
