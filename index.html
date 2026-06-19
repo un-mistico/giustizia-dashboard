@@ -53,7 +53,7 @@
       <p>Denunce, processi, carceri, magistrati e costi. Scrolla per capire perché la giustizia in Italia è lenta, intasata e costosa. I dati completi sono in alto a destra.</p>
       <a href="#s1" class="btn btn-primary">Inizia a scrollare</a>
       <div style="margin-top:18px">
-        <a href="dashboard.html" class="btn-secondary" style="margin-left:0">Oppure vai direttamente ai dati completi →</a>
+        <a href="dashboard.html" class="btn-secondary">Oppure vai direttamente ai dati completi →</a>
       </div>
     </div>
   </section>
@@ -93,22 +93,17 @@
 
   <section id="s4">
     <div class="wrap content">
-      <div class="eyebrow">04 · Penale</div>
-      <div class="two-col">
-        <div>
-          <div class="label">Durata media processo penale (3 gradi)</div>
-          <div class="big-num positive" data-target="2.4" data-suffix=" anni">0</div>
-          <p style="font-size:16px">Qui l'obiettivo PNRR di riduzione del 25% è stato centrato. Ma siamo ancora sopra la media UE di circa 1 anno e 3 mesi.</p>
-        </div>
-        <div>
-          <table class="small-table">
-            <tr><td>Italia civile</td><td>5,9a</td></tr>
-            <tr><td>Italia penale</td><td>2,4a</td></tr>
-            <tr><td>Media UE civile</td><td>~2,2a</td></tr>
-            <tr><td>Media UE penale</td><td>~1,3a</td></tr>
-          </table>
-        </div>
+      <div class="eyebrow">04 · Forze dell'ordine</div>
+      <div class="label">Reati denunciati ogni 100 agenti (stima 2024)</div>
+      <div class="big-num accent" data-target="28" data-suffix="">0</div>
+      <h2>Poca forza sul territorio rispetto al carico di lavoro</h2>
+      <p>L'Italia ha circa 290mila agenti tra Polizia, Carabinieri, Guardia di Finanza e corpi locali. Ma molte unità sono impiegate in servizi di ordine pubblico e burocrazia, non nelle indagini di prossimità.</p>
+      <div class="bar-block" style="max-width:520px">
+        <div class="bar-wrap"><div class="bar-label">Agenti totali (mila)</div><div class="bar accent" data-width="58"></div><div class="bar-value">~290</div></div>
+        <div class="bar-wrap"><div class="bar-label">Reati denunciati/anno (mila)</div><div class="bar neutral" data-width="48"></div><div class="bar-value">~2.380</div></div>
+        <div class="bar-wrap"><div class="bar-label">Reati ogni 100 agenti</div><div class="bar accent" data-width="28"></div><div class="bar-value">~28</div></div>
       </div>
+      <div class="note">Stima aggregata. Fonte: Ministero dell'Interno, DatiINCI.</div>
     </div>
   </section>
 
@@ -160,9 +155,29 @@
     <div class="wrap content">
       <div class="eyebrow">10 · Sintesi</div>
       <h2>La fotografia in tre righe</h2>
-      <p>1. Troppe denunce, troppi archivi e troppi patteggiamenti: il sistema non riesce a portare in tribunale la maggior parte dei casi.</p>
-      <p>2. I processi civili durano il triplo della media UE, mentre quelli penali sono migliorati ma restano sopra la media.</p>
-      <p>3. Le carceri sono piene e ci sono pochi magistrati: la combinazione produce tempi lunghi, costi alti e scarsa efficacia della pena.</p>
+      <div class="summary-list" style="max-width:620px">
+        <div style="display:flex;gap:14px;margin-bottom:18px">
+          <div style="font-size:28px;line-height:1">📁</div>
+          <div>
+            <strong style="color:#fff">Un sistema che deflagra i casi</strong>
+            <p style="font-size:16px;margin:4px 0 0">Troppe denunce finiscono in archiviazioni o patteggiamenti prima del giudizio.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;margin-bottom:18px">
+          <div style="font-size:28px;line-height:1">⏱️</div>
+          <div>
+            <strong style="color:#fff">Civile lentissimo, penale migliorato</strong>
+            <p style="font-size:16px;margin:4px 0 0">I processi civili durano il triplo della media UE. Quelli penali sono scesi ma restano sopra.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px">
+          <div style="font-size:28px;line-height:1">🏛️</div>
+          <div>
+            <strong style="color:#fff">Carceri piene, magistrati pochi</strong>
+            <p style="font-size:16px;margin:4px 0 0">La combinazione produce tempi lunghi, costi alti e scarsa efficacia della pena.</p>
+          </div>
+        </div>
+      </div>
       <div class="note">Questo è un riassunto narrativo. I numeri completi e i caveat sono nella dashboard.</div>
     </div>
   </section>
@@ -172,7 +187,7 @@
       <div class="eyebrow">11 · Approfondisci</div>
       <h2 style="font-size:40px">Vai ai dati completi</h2>
       <p style="margin:0 auto 28px;max-width:560px">Nella dashboard trovi denunce per tipologia, tempi storici, esiti, carceri, magistrati, costi, confronti UE e i file CSV scaricabili.</p>
-      <div class="cta-group" style="opacity:1;transform:none">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:16px">
         <a href="dashboard.html" class="btn btn-primary">Apri la dashboard completa →</a>
         <a href="https://un-mistico.github.io/repo-italia/" class="btn-secondary">← Torna a repo_italia</a>
       </div>
