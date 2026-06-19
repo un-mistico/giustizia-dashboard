@@ -34,18 +34,18 @@
     .kpi{background:#16161B;border:1px solid #222;border-radius:10px;padding:16px 18px;position:relative}
     .kpi .val{font-size:26px;font-weight:800;color:#fff}
     .kpi .val.accent{color:#c8a327}
-    .kpi .val.info{color:#4A6FA5}
-    .kpi .val.positive{color:#81b873}
-    .kpi .val.negative{color:#e63a46}
+    .kpi .val.info{color:#c8a327}
+    .kpi .val.positive{color:#c8a327}
+    .kpi .val.negative{color:#c8a327}
     .kpi .val.warn{color:#c8a327}
     .kpi .lbl{font-size:10px;color:#777;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
     .kpi .trend{font-size:11px;margin-top:6px}
-    .trend-up{color:#c8a327}.trend-down{color:#81b873}.trend-neutral{color:#888}
+    .trend-up{color:#c8a327}.trend-down{color:#555}.trend-neutral{color:#555}
     .kpi .badge{display:inline-block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 6px;border-radius:4px;margin-top:6px}
-    .badge-official{background:#1A3A1A;color:#81b873}
-    .badge-estimate{background:#3A2A1A;color:#c8a327}
-    .badge-provisional{background:#1A2A3A;color:#c8a327}
-    .badge-outdated{background:#3A1A1A;color:#e63a46}
+    .badge-official{background:#c8a32722;color:#c8a327}
+    .badge-estimate{background:#c8a32722;color:#c8a327}
+    .badge-provisional{background:#c8a32722;color:#c8a327}
+    .badge-outdated{background:#333;color:#888}
     .chart-grid{display:grid;gap:16px;margin-bottom:16px}
     .chart-grid.cols-2{grid-template-columns:1fr 1fr}
     .chart-grid.cols-3{grid-template-columns:1fr 1fr 1fr}
@@ -54,7 +54,7 @@
     .chart-container{position:relative;width:100%;height:280px}
     .chart-container.tall{height:360px}
     .insight-box{background:#121A12;border:1px solid #1A3A1A;border-radius:8px;padding:14px 18px;margin:12px 0}
-    .insight-box .text{font-size:13px;color:#81b873;font-weight:500}
+    .insight-box .text{font-size:13px;color:#c8a327;font-weight:500}
     .warning-box{background:#1A1212;border:1px solid #3A2222;border-radius:8px;padding:14px 18px;margin:12px 0}
     .warning-box .text{font-size:13px;color:#c8a327;font-weight:600}
     .method-box{background:#16161B;border:1px solid #222;border-radius:8px;padding:16px 18px;margin:12px 0}
@@ -126,11 +126,11 @@
       </div>
       <div class="kpi">
         <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Tempo medio per chiudere un processo civile che arriva fino al terzo grado. Include tribunale, appello e Cassazione.</span></span>
-        <div class="val negative" id="kpi-tempocivile">5,9anni</div><div class="lbl">Durata media processo civile</div><div class="trend trend-down">-28% vs 2019, obiettivo PNRR -40%</div>
+        <div class="val accent" id="kpi-tempocivile">5,9anni</div><div class="lbl">Durata media processo civile</div><div class="trend trend-down">-28% vs 2019, obiettivo PNRR -40%</div>
       </div>
       <div class="kpi">
         <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Detenuti presenti nelle carceri italiane rispetto ai posti regolamentari. Sopra il 100% significa sovraffollamento.</span></span>
-        <div class="val negative" id="kpi-sovraffollamento">121%</div><div class="lbl">Sovraffollamento carceri 2024</div><div class="trend trend-up">+3pp vs 2023</div>
+        <div class="val accent" id="kpi-sovraffollamento">121%</div><div class="lbl">Sovraffollamento carceri 2024</div><div class="trend trend-up">+3pp vs 2023</div>
       </div>
       <div class="kpi">
         <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Giudici professionali ogni 100.000 abitanti. Include magistrati onorari? No, solo professionali. La media UE è circa 22.</span></span>
@@ -145,13 +145,13 @@
       
       <div class="kpi">
         <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Stima basata su dati 2020-2021 (Cassazione). Indica quanti procedimenti penali si chiudono in archiviazione prima del giudizio. Dato aggiornato non disponibile in forma aggregata.</span></span>
-        <div class="val negative" id="kpi-archiviazioni">~60%</div><div class="lbl">Procedimenti in archiviazione (stima)</div><div class="trend trend-neutral">dati 2020-2021 · aggiornamento aggregato non disponibile</div>
+        <div class="val accent" id="kpi-archiviazioni">~60%</div><div class="lbl">Procedimenti in archiviazione (stima)</div><div class="trend trend-neutral">dati 2020-2021 · aggiornamento aggregato non disponibile</div>
         <span class="badge badge-outdated">outdated estimate</span>
       </div>
       
       <div class="kpi">
         <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Spesa complessiva del sistema giustizia (tribunali, magistratura, carceri, DAP, CSM, Cassazione, Procura generale).</span></span>
-        <div class="val warn" id="kpi-spesa">~€11Mld</div><div class="lbl">Spesa giustizia / anno</div><div class="trend trend-neutral">~1,2% spesa pubblica, ~€112/abitante</div>
+        <div class="val accent" id="kpi-spesa">~€11Mld</div><div class="lbl">Spesa giustizia / anno</div><div class="trend trend-neutral">~1,2% spesa pubblica, ~€112/abitante</div>
       </div>
     </div>
 
@@ -207,7 +207,7 @@
     <div class="kpi-grid">
       <div class="kpi">
         <span class="info-tooltip" style="float:right;margin-top:-4px"><span class="icon">i</span><span class="tooltip-text">Durata media dei processi civili conclusi fino al terzo grado (tribunale + appello + Cassazione). Fonte: Osservatorio CPI / Ministero Giustizia.</span></span>
-        <div class="val negative" id="kpi-civile">5,9anni</div><div class="lbl">Processo civile (3 gradi)</div><div class="trend trend-down">da 8 anni (2014) · ma +100% vs UE</div>
+        <div class="val accent" id="kpi-civile">5,9anni</div><div class="lbl">Processo civile (3 gradi)</div><div class="trend trend-down">da 8 anni (2014) · ma +100% vs UE</div>
         <span class="badge badge-official">official / CPI</span>
       </div>
       <div class="kpi">
@@ -216,7 +216,7 @@
         <span class="badge badge-official">official / CPI</span>
       </div>
       <div class="kpi"><div class="val accent" id="kpi-pendenze">~1,4M</div><div class="lbl">Procedimenti penali pendenti</div><div class="trend trend-down">-5,9% 2024, -3,2% I sem. 2025</div></div>
-      <div class="kpi"><div class="val negative" id="kpi-archiviazioni2">~60%</div><div class="lbl">Procedimenti archiviati (stima)</div><div class="trend trend-neutral">dati 2020-2021 · quasi 2/3 non arrivano a giudizio</div>
+      <div class="kpi"><div class="val accent" id="kpi-archiviazioni2">~60%</div><div class="lbl">Procedimenti archiviati (stima)</div><div class="trend trend-neutral">dati 2020-2021 · quasi 2/3 non arrivano a giudizio</div>
         <span class="badge badge-outdated">outdated estimate</span>
       </div>
     </div>
@@ -250,9 +250,9 @@
     
     <div class="kpi-grid">
       <div class="kpi"><div class="val" id="kpi-detenuti2">61.861</div><div class="lbl">Detenuti fine 2024</div><div class="trend trend-up">+2,8% vs 2023 · ~63.900 a fine 2025</div></div>
-      <div class="kpi"><div class="val negative" id="kpi-affollamento">121%</div><div class="lbl">Affollamento ufficiale 2024</div><div class="trend trend-up">da 117,6% (2023)</div></div>
-      <div class="kpi"><div class="val negative" id="kpi-affollamento-eff">~134%</div><div class="lbl">Affollamento effettivo</div><div class="trend trend-up">contando i posti non disponibili</div></div>
-      <div class="kpi"><div class="val warn" id="kpi-costo-det">~€3,4Mld</div><div class="lbl">Spesa DAP (amministrazione penitenziaria)</div><div class="trend trend-neutral">~€55/abitante/anno, 30% della giustizia</div></div>
+      <div class="kpi"><div class="val accent" id="kpi-affollamento">121%</div><div class="lbl">Affollamento ufficiale 2024</div><div class="trend trend-up">da 117,6% (2023)</div></div>
+      <div class="kpi"><div class="val accent" id="kpi-affollamento-eff">~134%</div><div class="lbl">Affollamento effettivo</div><div class="trend trend-up">contando i posti non disponibili</div></div>
+      <div class="kpi"><div class="val accent" id="kpi-costo-det">~€3,4Mld</div><div class="lbl">Spesa DAP (amministrazione penitenziaria)</div><div class="trend trend-neutral">~€55/abitante/anno, 30% della giustizia</div></div>
     </div>
 
     <div class="chart-grid cols-2">
@@ -487,8 +487,11 @@
 </div>
 
 <script>
+    Chart.defaults.color = '#888';
+    Chart.defaults.borderColor = '#222';
+    
 const gridColor='rgba(255,255,255,0.05)';
-const accent='#c8a327', blue='#e8c65a', green='#81b873', red='#e63a46', gold='#c8a327', grey='#6B6B6B';
+const accent='#c8a327', blue='#c8a327', green='#c8a327', red='#c8a327', gold='#c8a327', grey='#555';
 
 function buildChart(id, config){
   const ctx=document.getElementById(id);
@@ -522,8 +525,8 @@ function renderTabCharts(tab){
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:false,ticks:{callback:v=>v+'M'},grid:{color:gridColor}},x:{grid:{display:false}}}}
     });
     charts['tipi-reati'] = buildChart('chart-tipi-reati', {
-      type:'doughnut',
-      data:{labels:['Furti','Truffe/frodi informatiche','Droga','Lesioni/violenze','Rapine','Altro'],datasets:[{data:[44,12,8,9,2,25],backgroundColor:[red,blue,gold,'#8B5A3C',accent,grey],borderWidth:0}]},
+      type:'bar',
+      data:{labels:['Furti','Truffe/frodi informatiche','Droga','Lesioni/violenze','Rapine','Altro'],datasets:[{data:[44,12,8,9,2,25],backgroundColor:[red,blue,gold,'#c8a327',accent,grey],borderWidth:0}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#aaa',font:{size:11}},reverse:true},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
     });
     charts['tempi-civili-ue'] = buildChart('chart-tempi-civili-ue', {
@@ -539,8 +542,8 @@ function renderTabCharts(tab){
   }
   if(tab==='denunce'){
     charts['reati-torta'] = buildChart('chart-reati-torta', {
-      type:'doughnut',
-      data:{labels:['Furti','Truffe/frodi informatiche','Droga','Lesioni/violenze','Rapine','Altro'],datasets:[{data:[44,12,8,9,2,25],backgroundColor:[red,blue,gold,'#8B5A3C',accent,grey],borderWidth:0}]},
+      type:'bar',
+      data:{labels:['Furti','Truffe/frodi informatiche','Droga','Lesioni/violenze','Rapine','Altro'],datasets:[{data:[44,12,8,9,2,25],backgroundColor:[red,blue,gold,'#c8a327',accent,grey],borderWidth:0}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#aaa',font:{size:11}},reverse:true},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
     });
     charts['reati-var'] = buildChart('chart-reati-var', {
@@ -566,8 +569,8 @@ function renderTabCharts(tab){
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>v+'a'},grid:{color:gridColor}},x:{grid:{display:false}}}}
     });
     charts['esiti'] = buildChart('chart-esiti', {
-      type:'doughnut',
-      data:{labels:['Condanne','Assoluzioni','Patteggiamenti','Archiviazioni/estinzioni','Altro'],datasets:[{data:[24,24,18,28,6],backgroundColor:[red,'#E8B89D',gold,grey,blue],borderWidth:0}]},
+      type:'bar',
+      data:{labels:['Condanne','Assoluzioni','Patteggiamenti','Archiviazioni/estinzioni','Altro'],datasets:[{data:[24,24,18,28,6],backgroundColor:[red,'#c8a327',gold,grey,blue],borderWidth:0}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#aaa',font:{size:11}},reverse:true},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
     });
     charts['pendenze-storico'] = buildChart('chart-pendenze-storico', {
@@ -586,8 +589,8 @@ function renderTabCharts(tab){
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{color:'#aaa',font:{size:11}}}},scales:{y:{beginAtZero:false,ticks:{callback:v=>(v/1000)+'K'},grid:{color:gridColor}},y1:{position:'right',beginAtZero:false,ticks:{callback:v=>v+'%'},grid:{display:false}},x:{grid:{display:false}}}}
     });
     charts['pene'] = buildChart('chart-pene', {
-      type:'doughnut',
-      data:{labels:['Pena definitiva','Custodia cautelare','Pena residua < 3 anni','Stranieri','Altro'],datasets:[{data:[52,18,38,27,5],backgroundColor:[red,blue,gold,'#6B8FB5',grey],borderWidth:0}]},
+      type:'bar',
+      data:{labels:['Pena definitiva','Custodia cautelare','Pena residua < 3 anni','Stranieri','Altro'],datasets:[{data:[52,18,38,27,5],backgroundColor:[red,blue,gold,'#c8a327',grey],borderWidth:0}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#aaa',font:{size:11}},reverse:true},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
     });
     charts['carc-ue'] = buildChart('chart-carc-ue', {
@@ -609,7 +612,7 @@ function renderTabCharts(tab){
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>v},grid:{color:gridColor}},x:{grid:{display:false}}}}
     });
     charts['spesa-comp'] = buildChart('chart-spesa-comp', {
-      type:'doughnut',
+      type:'bar',
       data:{labels:['DAP/carceri','Personale magistratura e uffici','Funzionamento tribunali','Cassazione/CSM/altro'],datasets:[{data:[30,35,20,15],backgroundColor:[red,blue,gold,grey],borderWidth:0}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#aaa',font:{size:11}},reverse:true},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
     });
@@ -617,7 +620,7 @@ function renderTabCharts(tab){
   if(tab==='efficienza'){
     charts['denunce-condanna'] = buildChart('chart-denunce-condanna', {
       type:'bar',
-      data:{labels:['Archiviazioni','Assoluzioni','Patteggiamenti','Condanne definitive','Prescritti/altro'],datasets:[{data:[63,24,18,9,6],backgroundColor:[grey,'#E8B89D',gold,red,blue],borderRadius:4}]},
+      data:{labels:['Archiviazioni','Assoluzioni','Patteggiamenti','Condanne definitive','Prescritti/altro'],datasets:[{data:[63,24,18,9,6],backgroundColor:[grey,'#c8a327',gold,red,blue],borderRadius:4}]},
       options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.raw+'%'}}},scales:{x:{beginAtZero:true,ticks:{callback:v=>v+'%'},grid:{color:gridColor}},y:{grid:{display:false}}}}
     });
     charts['costo-efficienza'] = buildChart('chart-costo-efficienza', {
