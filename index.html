@@ -24,10 +24,10 @@
 
     html{scroll-snap-type:y mandatory}
     .top-nav .brand span{color:var(--accent)}
-    .scrolly .bar.green{background:var(--green)}
-    .scrolly .bar.blue{background:var(--blue)}
-    .scrolly .bar.gold{background:var(--gold)}
-    .scrolly .bar.grey{background:#555}
+    .scrolly .bar.positive{background:var(--positive)}
+    .scrolly .bar.negative{background:var(--negative)}
+    .scrolly .bar.neutral{background:var(--neutral)}
+    .scrolly .bar.shade{background:var(--accent-dim)}
     .final p{max-width:560px;margin:0 auto 28px}
     @media(max-width:720px){}
   
@@ -37,7 +37,7 @@
   <div class="progress" id="progress"></div>
 
   <nav class="top-nav" id="nav">
-    <a class="brand" href="https://un-mistico.github.io/repo-italia/">repo_italia <span>· Giustizia</span></a>
+    <a class="brand" href="https://un-mistico.github.io/repo-italia/">🇮🇹 repo_italia <span>· Giustizia</span></a>
     <div class="links">
       <a href="https://github.com/un-mistico/giustizia-dashboard/tree/main/data" target="_blank">Download CSV</a>
       <a class="cta-nav" href="dashboard.html">Esplora →</a>
@@ -86,7 +86,7 @@
       <div class="label">Durata media processo civile (3 gradi)</div>
       <div class="big-num accent" data-target="5.9" data-suffix=" anni">0</div>
       <h2>Un processo civile dura in media quasi 6 anni</h2>
-      <p>Da tribunale ad appello fino alla Cassazione. La media UE è poco più di 2 anni. L'Italia ha la durata più lunga d'Europa.</p>
+      <p>La media UE è poco più di 2 anni. L'Italia è al top per durata dei processi civili.</p>
       <div class="note">Si intende i processi che arrivano fino al terzo grado. Molti si chiudono prima.</div>
     </div>
   </section>
@@ -97,7 +97,7 @@
       <div class="label">Reati denunciati ogni 100 agenti (stima 2024)</div>
       <div class="big-num accent" data-target="28" data-suffix="">0</div>
       <h2>Poca forza sul territorio rispetto al carico di lavoro</h2>
-      <p>L'Italia ha circa 290mila agenti tra Polizia, Carabinieri, Guardia di Finanza e corpi locali. Ma molte unità sono impiegate in servizi di ordine pubblico e burocrazia, non nelle indagini di prossimità.</p>
+      <p>Circa 290mila agenti, ma molte unità sono impiegate in ordine pubblico e burocrazia piuttosto che in indagini.</p>
       <div class="bar-block" style="max-width:520px">
         <div class="bar-wrap"><div class="bar-label">Agenti totali (mila)</div><div class="bar accent" data-width="58"></div><div class="bar-value">~290</div></div>
         <div class="bar-wrap"><div class="bar-label">Reati denunciati/anno (mila)</div><div class="bar neutral" data-width="48"></div><div class="bar-value">~2.380</div></div>
@@ -124,14 +124,14 @@
       <div class="label">Persone in carcere fine 2024</div>
       <div class="big-num accent" data-target="61.9" data-suffix="mila">0</div>
       <h2>61.900 detenuti, di cui circa il 38% ha una pena residua inferiore a 3 anni</h2>
-      <p>Sono potenziali candidati a misure alternative (affidamento, semilibertà, lavoro di pubblica utilità). Ma spesso mancano i percorsi e le risorse.</p>
+      <p>Molti potrebbero scontare la pena con misure alternative, ma spesso mancano i percorsi e le risorse.</p>
       <div class="note">Fonte: DAP/Antigone. Il dato è in crescita del 2,8% rispetto al 2023.</div>
     </div>
   </section>
 
   <section id="s7">
     <div class="wrap content">
-      <div class="eyebrow">08 · PM</div>
+      <div class="eyebrow">07 · PM</div>
       <div class="label">Pubblici ministeri per 100mila abitanti in Italia</div>
       <div class="big-num accent" data-target="3.8" data-suffix="">0</div>
       <h2>Anche i pm sono pochissimi rispetto all'Europa</h2>
@@ -142,18 +142,18 @@
 
   <section id="s8">
     <div class="wrap content">
-      <div class="eyebrow">09 · Costi</div>
+      <div class="eyebrow">08 · Costi</div>
       <div class="label">Spesa pubblica per la giustizia (2025, stima)</div>
       <div class="big-num accent" data-target="11.2" data-suffix=" mld €">0</div>
       <h2>La giustizia costa circa 11 miliardi l'anno</h2>
-      <p>Circa il 30% va al DAP (carceri). Spendiamo in proporzione simile o superiore alla media UE, pur avendo meno magistrati. Il problema non è solo il budget, ma come è organizzato.</p>
+      <p>Spendiamo in proporzione simile alla media UE, pur avendo meno magistrati. Il problema non è solo il budget, ma come è organizzato.</p>
       <div class="note">Stima MEF/RGS. Include magistratura, tribunali, Cassazione, CSM, DAP.</div>
     </div>
   </section>
 
   <section id="s9">
     <div class="wrap content">
-      <div class="eyebrow">10 · Sintesi</div>
+      <div class="eyebrow">09 · Sintesi</div>
       <h2>La fotografia in tre righe</h2>
       <div class="summary-list" style="max-width:620px">
         <div style="display:flex;gap:14px;margin-bottom:18px">
@@ -184,7 +184,7 @@
 
   <section id="s10" class="final">
     <div class="wrap content">
-      <div class="eyebrow">11 · Approfondisci</div>
+      <div class="eyebrow">10 · Approfondisci</div>
       <h2 style="font-size:40px">Vai ai dati completi</h2>
       <p style="margin:0 auto 28px;max-width:560px">Nella dashboard trovi denunce per tipologia, tempi storici, esiti, carceri, magistrati, costi, confronti UE e i file CSV scaricabili.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:16px">
