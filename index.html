@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it" class="scrolly theme-default">
 <head>
@@ -7,10 +6,11 @@
   <title>⚖️ Giustizia in Italia: 8 indicatori per capire il sistema</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚖️%3C/text%3E%3C/svg%3E">
   <meta property="og:title" content="⚖️ Giustizia in Italia: 8 indicatori per capire il sistema">
-  <meta property="og:description" content="Un racconto scorrevole su denunce, processi, carceri, magistrati e costi. Poi i dati completi, tab per tab.">
+  <meta property="og:description" content="Denunce, reati irrisolti, forze dell'ordine, processi, carceri, custodia cautelare, magistrati e costi. Un racconto scorrevole in 8 dati.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://un-mistico.github.io/giustizia-dashboard/preview.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="Giustizia in Italia: 2,38M denunce, 80% senza colpevole, 5,9 anni per processo civile, carceri al 137%, 3,8 pm ogni 100mila abitanti. Un racconto scorrevole in 8 indicatori.">
   <link rel="stylesheet" href="base.css">
   <style>
     .hero h1,.hero p,.hero .eyebrow,.hero .cta-group{text-align:center}
@@ -67,134 +67,160 @@
 
   <section id="s2">
     <div class="wrap content">
-      <div class="eyebrow">02 · Esiti</div>
-      <div class="label">Procedimenti penali chiusi in archiviazione <span class="year-badge">2023-24</span></div>
-      <div class="big-num accent" data-target="60" data-suffix="%">60%</div>
-      <h2>Quasi due denunce su tre non arrivano a giudizio</h2>
-      <p>Archiviazioni, patteggiamenti, prescrizioni: il sistema <span class="highlight">smaltisce</span> molti procedimenti prima del dibattimento. Non è necessariamente un male, ma significa che le risorse vengono usate per casi che non arrivano a sentenza.</p>
-      <div class="note">Dati aggiornati alla Relazione sul funzionamento della giustizia 2023-2024. Una quota rilevante di archiviazioni riguarda reati contro ignoti.</div>
-      <div class="note">⚠️ Una quota significativa di processi si estingue per prescrizione: i termini scadono prima della sentenza.</div>
-      <div class="note">⚠️ Lo Stato rimborsa i risarcimenti per ingiusta detenzione: cifre annuali nell'ordine delle decine di milioni di euro.</div>
+      <div class="eyebrow">02 · Reati irrisolti</div>
+      <div class="label">Reati con autore ignoto <span class="year-badge">2024</span></div>
+      <div class="big-num accent" data-target="80" data-suffix="%">80%</div>
+      <h2>L'80% dei reati denunciati resta senza colpevole</h2>
+      <p>Le forze dell'ordine sono efficaci sui reati gravi: il 91% degli omicidi viene risolto. Ma sui reati predatori, che sono il 44% di tutti i delitti, la percentuale di colpevoli individuati è minima. I furti vengono quasi tutti archiviati per autore ignoto.</p>
+      <div class="bar-block" style="max-width:560px">
+        <div class="bar-title" style="font-size:14px;color:var(--text-dim);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px">Tasso di risoluzione per tipo di reato (2024)</div>
+        <div class="bar-wrap"><div class="bar-label">Omicidi volontari</div><div class="bar accent" data-width="91"></div><div class="bar-value">91%</div></div>
+        <div class="bar-wrap"><div class="bar-label">Altri reati contro la persona</div><div class="bar neutral" data-width="65"></div><div class="bar-value">65%</div></div>
+        <div class="bar-wrap"><div class="bar-label">Furti (44% del totale)</div><div class="bar neutral" data-width="15"></div><div class="bar-value">15%</div></div>
+        <div class="bar-wrap"><div class="bar-label">Altri reati patrimoniali</div><div class="bar neutral" data-width="20"></div><div class="bar-value">20%</div></div>
+      </div>
+      <div class="note">Circa il 60% dei reati consumati non viene nemmeno denunciato (indagini di vittimizzazione ISTAT). Fonte: ISTAT, Ministero dell'Interno 2024.</div>
     </div>
   </section>
 
   <section id="s3">
     <div class="wrap content">
-      <div class="eyebrow">03 · Civile</div>
-      <div class="label">Durata media processo civile (3 gradi) <span class="year-badge">2024</span></div>
-      <div class="big-num accent" data-target="5.9" data-suffix=" anni">5,9 anni</div>
-      <h2>Un processo civile dura in media quasi 6 anni</h2>
-      <p>La media UE è poco più di 2 anni. L'Italia è al top per durata dei processi civili.</p>
-      <div class="note">Si intende i processi che arrivano fino al terzo grado. Molti si chiudono prima.</div>
+      <div class="eyebrow">03 · Forze dell'ordine</div>
+      <div class="label">Agenti di polizia ogni 100.000 abitanti <span class="year-badge">2024</span></div>
+      <div class="big-num accent" data-target="399">399</div>
+      <h2>Più agenti di Francia, Germania e Spagna. Ma non basta.</h2>
+      <p>L'Italia ha 399 agenti ogni 100mila abitanti, sopra la media UE (342) e più di Germania (317), Francia (371) e Spagna (378). Il problema non è la quantità, ma la frammentazione: 5 corpi di polizia principali generano duplicazione di catene di comando, sedi e sistemi. Una quota sproporzionata di agenti è assorbita da mansioni amministrative.</p>
+      <div class="bar-block" style="max-width:560px">
+        <div class="bar-title" style="font-size:14px;color:var(--text-dim);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px">Agenti di polizia ogni 100.000 abitanti (2024)</div>
+        <div class="bar-wrap"><div class="bar-label">Italia</div><div class="bar accent" data-width="100"></div><div class="bar-value">399</div></div>
+        <div class="bar-wrap"><div class="bar-label">Spagna</div><div class="bar neutral" data-width="95"></div><div class="bar-value">378</div></div>
+        <div class="bar-wrap"><div class="bar-label">Francia</div><div class="bar neutral" data-width="93"></div><div class="bar-value">371</div></div>
+        <div class="bar-wrap"><div class="bar-label">Media UE</div><div class="bar neutral" data-width="86"></div><div class="bar-value">342</div></div>
+        <div class="bar-wrap"><div class="bar-label">Germania</div><div class="bar neutral" data-width="80"></div><div class="bar-value">317</div></div>
+      </div>
+      <div class="note">5 corpi principali: Polizia di Stato, Carabinieri, Guardia di Finanza, Polizia Penitenziaria, Polizia Locale. Fonte: Eurostat 2024.</div>
     </div>
   </section>
 
   <section id="s4">
     <div class="wrap content">
-      <div class="eyebrow">04 · Forze dell'ordine</div>
-      <div class="label">Reati denunciati ogni 100 agenti (stima 2024)</div>
-      <div class="big-num accent" data-target="820" data-suffix="">820</div>
-      <h2>Tanti agenti, pochi sulle indagini</h2>
-      <p>L'Italia ha circa 450 agenti ogni 100mila abitanti, un valore alto per gli standard UE. Ma molti sono impiegati in uffici, burocrazia e ordine pubblico, non in indagini. Risultato: circa 820 reati denunciati ogni 100 agenti, un carico di lavoro investigativo enorme.</p>
-      <div class="bar-block" style="max-width:520px">
-        <div class="bar-wrap"><div class="bar-label">Agenti totali (mila)</div><div class="bar neutral" data-width="58"></div><div class="bar-value">~290</div></div>
-        <div class="bar-wrap"><div class="bar-label">Reati denunciati/anno (mila)</div><div class="bar neutral" data-width="48"></div><div class="bar-value">~2.380</div></div>
-        <div class="bar-wrap"><div class="bar-label">Reati ogni 100 agenti</div><div class="bar accent" data-width="82"></div><div class="bar-value">~820</div></div>
+      <div class="eyebrow">04 · Processi e ricorsi</div>
+      <div class="label">Durata media processo civile (3 gradi) <span class="year-badge">2024</span></div>
+      <div class="big-num accent" data-target="5.9" data-suffix=" anni">5,9 anni</div>
+      <h2>Un processo civile dura in media quasi 6 anni</h2>
+      <p>La media UE è poco più di 2 anni. L'Italia è un outlier europeo per durata dei procedimenti. L'accesso quasi automatico all'appello e alla Cassazione, unito a 237.000 avvocati iscritti (4 ogni 1.000 abitanti), intasa i tribunali superiori.</p>
+      <div class="bar-block" style="max-width:560px">
+        <div class="bar-title" style="font-size:14px;color:var(--text-dim);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px">Conferme e riforme nei gradi di giudizio (penale, %)</div>
+        <div class="bar-wrap"><div class="bar-label">Conferme totali in appello</div><div class="bar accent" data-width="60"></div><div class="bar-value">60%</div></div>
+        <div class="bar-wrap"><div class="bar-label">Riforme parziali</div><div class="bar neutral" data-width="30"></div><div class="bar-value">30%</div></div>
+        <div class="bar-wrap"><div class="bar-label">Ribaltamenti totali</div><div class="bar neutral" data-width="10"></div><div class="bar-value">10%</div></div>
       </div>
-      <div class="note">Stima aggregata. Fonte: Ministero dell'Interno, DatiINCI.</div>
-      <div class="note">💡 Il problema non è la quantità di agenti (450/100mila abitanti, più della Germania), ma la frammentazione in troppi corpi e l'eccesso di compiti burocratici.</div>
+      <div class="note">Le corti d'appello confermano totalmente o parzialmente il 90% delle condanne. In Cassazione, oltre l'80% dei ricorsi viene respinto o dichiarato inammissibile. Solo il 16-17% viene annullato. Fonte: Ministero della Giustizia, Relazione annuale.</div>
     </div>
   </section>
 
   <section id="s5">
     <div class="wrap content">
       <div class="eyebrow">05 · Carceri</div>
-      <div class="label">Affollamento carceri <span class="year-badge">2024</span></div>
-      <div class="big-num accent" data-target="121" data-suffix="%">121%</div>
-      <h2>Le carceri sono sovraffollate del 21%</h2>
-      <p>I posti regolamentari sono circa 51.200, ma i detenuti sono 61.900. Se si contano anche le celle inagibili, l'affollamento effettivo sale al 134%.</p>
-      <div class="note">Fonte: DAP/Antigone. Il sovraffollamento crea tensioni, riduce l'efficacia della pena e aumenta i costi di gestione.</div>
+      <div class="label">Sovraffollamento carcerario <span class="year-badge">2025-26</span></div>
+      <div class="big-num accent" data-target="137" data-suffix="%">137%</div>
+      <h2>63.500 detenuti in spazi per 46.800</h2>
+      <p>I posti regolamentari sono 51.300, ma quasi 5.000 sono inagibili. I posti effettivamente agibili sono circa 46.800. Con 63.500 detenuti, il sovraffollamento reale supera il 137%. L'Italia ha il quarto tasso di sovraffollamento più alto d'Europa.</p>
+      <div class="note">Dati al 31 dicembre 2025. Fonte: DAP, Antigone, Sole24Ore. Cipro 227,6%, Romania, Ungheria precedono l'Italia.</div>
     </div>
   </section>
 
   <section id="s6">
     <div class="wrap content">
-      <div class="eyebrow">06 · Detenuti</div>
-      <div class="label">Persone in carcere <span class="year-badge">2024</span></div>
-      <div class="big-num accent" data-target="61.9" data-suffix="mila">61,9mila</div>
-      <h2>61.900 detenuti, di cui circa il 38% ha una pena residua inferiore a 3 anni</h2>
-      <p>Molti potrebbero scontare la pena con misure alternative, ma spesso mancano i percorsi e le risorse.</p>
-      <div class="note">Fonte: DAP/Antigone. Il dato è in crescita del 2,8% rispetto al 2023.</div>
+      <div class="eyebrow">06 · Custodia cautelare</div>
+      <div class="label">Detenuti in attesa di giudizio <span class="year-badge">2024</span></div>
+      <div class="big-num accent" data-target="26.5" data-suffix="%">26,5%</div>
+      <h2>Più di un quarto dei detenuti non ha una condanna</h2>
+      <p>Il 26,5% della popolazione carceraria è in attesa di giudizio. L'Italia è il quinto paese UE per tasso di detenuti non definitivi. Il 14% degli imputati in custodia cautelare viene poi assolto, e lo Stato paga risarcimenti per ingiusta detenzione.</p>
+      <div class="bar-block" style="max-width:560px">
+        <div class="bar-title" style="font-size:14px;color:var(--text-dim);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px">Recidiva: carcere vs misure alternative (%)</div>
+        <div class="bar-wrap"><div class="bar-label">Carcere (pena scontata)</div><div class="bar accent" data-width="68"></div><div class="bar-value">68%</div></div>
+        <div class="bar-wrap"><div class="bar-label">Misure alternative</div><div class="bar neutral" data-width="19"></div><div class="bar-value">19%</div></div>
+      </div>
+      <div class="note">Studio DAP 2007, confermato da Antigone ed Eurispes. La recidiva per chi sconta l'intera pena in carcere è del 68%, mentre per chi accede a misure alternative crolla al 19%. Fonte: Antigone, Rapporto 2024.</div>
     </div>
   </section>
 
   <section id="s7">
     <div class="wrap content">
-      <div class="eyebrow">07 · PM</div>
-      <div class="label">Pubblici ministeri per 100mila abitanti <span class="year-badge">2024</span></div>
-      <div class="big-num accent" data-target="3.8" data-suffix="">3,8</div>
-      <h2>Anche i pm sono pochissimi rispetto all'Europa</h2>
-      <p>La media europea è circa 11 pm ogni 100mila abitanti. Con così pochi pm, le indagini preliminari si allungano e le archiviazioni aumentano.</p>
-      <div class="note">Fonte: CEPEJ / CSM. Il dato include pm che svolgono anche funzioni giudicanti o di indagine.</div>
+      <div class="eyebrow">07 · Magistrati e costi</div>
+      <div class="label">Pubblici ministeri ogni 100.000 abitanti <span class="year-badge">2024</span></div>
+      <div class="big-num accent" data-target="3.8">3,8</div>
+      <h2>Pochi pm, molto budget. Il problema è l'allocazione.</h2>
+      <p>L'Italia conta 3,8 pm ogni 100mila abitanti, contro una media UE di 11,2. Ma spende 100,6 euro pro capite per la giustizia (5,9 mld totali, 0,31% PIL), sopra la media europea. Il problema non è il budget, ma come è organizzato. Un'eccezione positiva: l'indice di digitalizzazione CEPEJ assegna all'Italia 6,49/10 contro una media europea di 4,16, trainato dal Processo Civile Telematico.</p>
+      <div class="bar-block" style="max-width:560px">
+        <div class="bar-title" style="font-size:14px;color:var(--text-dim);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px">PM ogni 100.000 abitanti (CEPEJ 2024)</div>
+        <div class="bar-wrap"><div class="bar-label">Media UE</div><div class="bar neutral" data-width="100"></div><div class="bar-value">11,2</div></div>
+        <div class="bar-wrap"><div class="bar-label">Italia</div><div class="bar accent" data-width="34"></div><div class="bar-value">3,8</div></div>
+      </div>
+      <div class="note">L'Italia spende più della media europea ma ha un terzo dei magistrati requirenti. Fonte: CEPEJ 2024, CSM.</div>
     </div>
   </section>
 
   <section id="s8">
     <div class="wrap content">
-      <div class="eyebrow">08 · Costi</div>
-      <div class="label">Spesa pubblica per la giustizia <span class="year-badge">2025 stima</span></div>
-      <div class="big-num accent" data-target="11.2" data-suffix=" mld €">11,2 mld €</div>
-      <h2>La giustizia costa circa 11 miliardi l'anno</h2>
-      <p>Spendiamo in proporzione simile alla media UE, pur avendo meno magistrati. Il problema non è solo il budget, ma come è organizzato.</p>
-      <div class="note">Stima MEF/RGS. Include magistratura, tribunali, Cassazione, CSM, DAP.</div>
-    </div>
-  </section>
-
-  <section id="s9">
-    <div class="wrap content">
-      <div class="eyebrow">09 · Sintesi</div>
-      <h2>La fotografia in tre righe</h2>
-      <div class="summary-list" style="max-width:620px">
-        <div style="display:flex;gap:14px;margin-bottom:18px">
+      <div class="eyebrow">08 · Sintesi</div>
+      <h2>La fotografia in otto punti</h2>
+      <div class="summary-list" style="max-width:680px">
+        <div style="display:flex;gap:14px;margin-bottom:20px">
           <div style="font-size:28px;line-height:1">📁</div>
           <div>
-            <strong style="color:#fff">2,38M denunce, 2/3 senza giudizio</strong>
-            <p style="font-size:16px;margin:4px 0 0">Quasi 2,4 milioni di reati denunciati all'anno, ma due terzi non arrivano a un processo.</p>
+            <strong style="color:#fff">2,38M denunce, 80% senza colpevole</strong>
+            <p style="font-size:16px;margin:4px 0 0">L'80% dei reati denunciati resta a carico di autori ignoti. I furti (44% del totale) hanno tassi di risoluzione minimi.</p>
           </div>
         </div>
-        <div style="display:flex;gap:14px;margin-bottom:18px">
+        <div style="display:flex;gap:14px;margin-bottom:20px">
+          <div style="font-size:28px;line-height:1">🔍</div>
+          <div>
+            <strong style="color:#fff">Omicidi risolti al 91%</strong>
+            <p style="font-size:16px;margin:4px 0 0">Le forze dell'ordine sono efficaci sui reati gravi, ma falliscono sui reati predatori.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;margin-bottom:20px">
+          <div style="font-size:28px;line-height:1">👮</div>
+          <div>
+            <strong style="color:#fff">399 agenti/100mila, più di Germania</strong>
+            <p style="font-size:16px;margin:4px 0 0">Ma 5 corpi di polizia e frammentazione riducono l'efficacia operativa.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;margin-bottom:20px">
           <div style="font-size:28px;line-height:1">⏱️</div>
           <div>
             <strong style="color:#fff">Processi civili: 5,9 anni vs 2 UE</strong>
-            <p style="font-size:16px;margin:4px 0 0">Il triplo della media europea. L'Italia è al top per durata dei procedimenti civili.</p>
+            <p style="font-size:16px;margin:4px 0 0">Accesso quasi automatico a appello e Cassazione. Il 90% delle condanne viene confermato in appello.</p>
           </div>
         </div>
-        <div style="display:flex;gap:14px;margin-bottom:18px">
+        <div style="display:flex;gap:14px;margin-bottom:20px">
           <div style="font-size:28px;line-height:1">🏛️</div>
           <div>
-            <strong style="color:#fff">Carceri al 121%, 38% con pena &lt;3 anni</strong>
-            <p style="font-size:16px;margin:4px 0 0">Sovraffollamento cronico. Molti detenuti potrebbero scontare la pena con misure alternative.</p>
+            <strong style="color:#fff">Carceri al 137%</strong>
+            <p style="font-size:16px;margin:4px 0 0">63.500 detenuti in spazi per 46.800. Quarto tasso di sovraffollamento in Europa.</p>
           </div>
         </div>
-        <div style="display:flex;gap:14px;margin-bottom:18px">
-          <div style="font-size:28px;line-height:1">👮</div>
-          <div>
-            <strong style="color:#fff">450 agenti/100mila, ma 820 reati ogni 100</strong>
-            <p style="font-size:16px;margin:4px 0 0">Più agenti della Germania, ma frammentazione e burocrazia riducono l'efficacia investigativa.</p>
-          </div>
-        </div>
-        <div style="display:flex;gap:14px;margin-bottom:18px">
+        <div style="display:flex;gap:14px;margin-bottom:20px">
           <div style="font-size:28px;line-height:1">⚖️</div>
           <div>
-            <strong style="color:#fff">11,9 giudici/100mila vs 22 UE</strong>
-            <p style="font-size:16px;margin:4px 0 0">PM solo 3,8 contro 11 della media europea. Pochi magistrati = indagini lunghe e prescrizioni.</p>
+            <strong style="color:#fff">26,5% in attesa di giudizio</strong>
+            <p style="font-size:16px;margin:4px 0 0">Il 14% dei cautelari viene assolto. Recidiva: 68% carcere vs 19% misure alternative.</p>
           </div>
         </div>
-        <div style="display:flex;gap:14px">
-          <div style="font-size:28px;line-height:1">💶</div>
+        <div style="display:flex;gap:14px;margin-bottom:20px">
+          <div style="font-size:28px;line-height:1">🧑‍⚖️</div>
           <div>
-            <strong style="color:#fff">Giustizia costa 11 mld/anno</strong>
-            <p style="font-size:16px;margin:4px 0 0">In linea con la UE in proporzione, ma con metà dei magistrati. Il problema è l'organizzazione, non il budget.</p>
+            <strong style="color:#fff">PM 3,8/100milla vs 11,2 UE</strong>
+            <p style="font-size:16px;margin:4px 0 0">Un terzo dei magistrati requirenti della media europea. Ma la spesa (100,6 euro pro capite) è sopra la media.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;margin-bottom:20px">
+          <div style="font-size:28px;line-height:1">💻</div>
+          <div>
+            <strong style="color:#fff">Digitalizzazione: 6,49/10 vs 4,16 UE</strong>
+            <p style="font-size:16px;margin:4px 0 0">L'eccellenza nascosta: Processo Civile Telematico.</p>
           </div>
         </div>
       </div>
@@ -202,9 +228,9 @@
     </div>
   </section>
 
-  <section id="s10" class="final">
+  <section id="s9" class="final">
     <div class="wrap content">
-      <div class="eyebrow">10 · Approfondisci</div>
+      <div class="eyebrow">09 · Approfondisci</div>
       <h2 style="font-size:36px">Vai ai dati completi</h2>
       <p style="margin:0 auto 28px;max-width:560px">Nella dashboard trovi denunce per tipologia, tempi storici, esiti, carceri, magistrati, costi, confronti UE e i file CSV scaricabili.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:16px">

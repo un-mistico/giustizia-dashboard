@@ -194,6 +194,10 @@
       <div class="chart-box"><h3>Denunce ogni 100mila abitanti: top 10 province (2024)</h3><div class="chart-container"><canvas id="chart-province"></canvas></div></div>
     </div>
 
+    <div class="chart-grid">
+      <div class="chart-box"><h3>Tasso di risoluzione per tipo di reato (2024)<span class="info-tooltip"><span class="icon">i</span><span class="tooltip-text">L'80% dei reati denunciati resta a carico di autori ignoti. Le forze dell'ordine sono efficaci sui reati gravi (omicidi 91%) ma falliscono sui reati predatori (furti 15%). Fonte: ISTAT, Ministero dell'Interno 2024.</span></span></h3><div class="chart-container"><canvas id="chart-risoluzione"></canvas></div></div>
+    </div>
+
     <div class="method-box">
       <h4>Cosa significa "denunce ogni 100mila abitanti"</h4>
       <p>E' un indice che permette di confrontare territori con popolazioni diverse. Una città con più denunce assolute potrebbe averne meno in rapporto agli abitanti. <strong>Attenzione</strong>: più denunce possono significare più reati, ma anche più fiducia nelle forze dell'ordine e quindi più segnalazioni.</p>
@@ -232,6 +236,10 @@
       <div class="chart-box"><h3>Procedimenti penali pendenti (milioni, 2019-2025)</h3><div class="chart-container"><canvas id="chart-pendenze-storico"></canvas></div></div>
     </div>
 
+    <div class="chart-grid">
+      <div class="chart-box"><h3>Conferme e riforme nei gradi di giudizio (penale, %)<span class="info-tooltip"><span class="icon">i</span><span class="tooltip-text">Le corti d'appello confermano totalmente o parzialmente il 90% delle condanne. In Cassazione, oltre l'80% dei ricorsi viene respinto. Fonte: Ministero della Giustizia.</span></span></h3><div class="chart-container"><canvas id="chart-gradi-giudizio"></canvas></div></div>
+    </div>
+
     <div class="method-box">
       <h4>Perché tante archiviazioni e patteggiamenti?</h4>
       <p>Una denuncia può finire in archiviazione per molti motivi: <strong>indagini incomplete, testimoni che ritrattano, reato prescritto, prova insufficiente, o perché l'indagine era fondata su una segnalazione che poi non regge</strong>. Non è automaticamente un "errore" della giustizia, ma un dato importante: molte risorse vengono usate per casi che non arrivano a sentenza.</p>
@@ -266,6 +274,10 @@
         <h3>Tasso di carcerazione: Italia vs UE (detenuti per 100mila abitanti)</h3>
         <div class="chart-container"><canvas id="chart-carc-ue"></canvas></div>
       </div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="chart-box"><h3>Recidiva: carcere vs misure alternative (%)<span class="info-tooltip"><span class="icon">i</span><span class="tooltip-text">Studio DAP 2007 confermato da Antigone ed Eurispes. La recidiva per chi sconta l'intera pena in carcere e del 68%, mentre per chi accede a misure alternative crolla al 19%.</span></span></h3><div class="chart-container"><canvas id="chart-recidiva"></canvas></div></div>
     </div>
 
     <div class="chart-box" style="margin-bottom:16px">
@@ -304,6 +316,18 @@
         <h3>Composizione spesa giustizia (% sul totale, stima 2025)</h3>
         <div class="chart-container"><canvas id="chart-spesa-comp"></canvas></div>
       </div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="chart-box"><h3>Agenti di polizia ogni 100.000 abitanti (Eurostat 2024)<span class="info-tooltip"><span class="icon">i</span><span class="tooltip-text">L'Italia ha 399 agenti ogni 100mila abitanti, sopra la media UE (342) e piu di Germania (317), Francia (371) e Spagna (378). Il problema non e la quantita ma la frammentazione in 5 corpi principali. Fonte: Eurostat 2024.</span></span></h3><div class="chart-container"><canvas id="chart-polizia-ue"></canvas></div></div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="chart-box"><h3>PM ogni 100.000 abitanti (CEPEJ 2024)<span class="info-tooltip"><span class="icon">i</span><span class="tooltip-text">L'Italia conta 3,8 pm ogni 100mila abitanti contro una media UE di 11,2. Ma spende 100,6 euro pro capite (sopra la media europea di 85,4). Fonte: CEPEJ 2024.</span></span></h3><div class="chart-container"><canvas id="chart-pm-ue"></canvas></div></div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="chart-box"><h3>Indice di digitalizzazione della giustizia (CEPEJ 2024)<span class="info-tooltip"><span class="icon">i</span><span class="tooltip-text">L'indice IT CEPEJ assegna all'Italia 6,49/10 contro una media europea di 4,16, trainato dal Processo Civile Telematico. Fonte: CEPEJ 2024.</span></span></h3><div class="chart-container"><canvas id="chart-digitalizzazione"></canvas></div></div>
     </div>
 
     <div class="method-box">
@@ -557,6 +581,16 @@ function renderTabCharts(tab){
       data:{labels:['Milano','Rimini','Prato','Firenze','Bologna','Roma','Imperia','Trieste','Padova','Torino'],datasets:[{data:[6952,6200,5800,5600,5400,5100,4900,4700,4600,4500],backgroundColor:[accent,grey,grey,grey,grey,grey,grey,grey,grey,grey],borderRadius:4}]},
       options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{callback:v=>v},grid:{color:gridColor}},y:{grid:{display:false}}}}
     });
+    charts['risoluzione'] = buildChart('chart-risoluzione', {
+      type:'bar', indexAxis:'y',
+      data:{labels:['Omicidi volontari','Altri reati contro persona','Altri reati patrimoniali','Furti (44% del totale)'],
+        datasets:[{data:[91,65,20,15],
+          backgroundColor:function(ctx){return ctx.dataIndex===0?'#c8a327':'#555'},
+          borderRadius:4}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.raw+'% tasso di risoluzione'}}},
+        scales:{x:{ticks:{callback:v=>v+'%'},grid:{color:gridColor}},y:{grid:{display:false}}}}
+    });
   }
   if(tab==='processi'){
     charts['tempi-civili'] = buildChart('chart-tempi-civili', {
@@ -579,6 +613,16 @@ function renderTabCharts(tab){
       data:{labels:['2019','2020','2021','2022','2023','2024','2025H1'],datasets:[{label:'Milioni',data:[1.55,1.48,1.42,1.38,1.35,1.30,1.26],borderColor:accent,backgroundColor:accent,tension:0.3,pointRadius:4}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:false,ticks:{callback:v=>v+'M'},grid:{color:gridColor}},x:{grid:{display:false}}}}
     });
+    charts['gradi-giudizio'] = buildChart('chart-gradi-giudizio', {
+      type:'bar', indexAxis:'y',
+      data:{labels:['Conferme totali','Riforme parziali','Ribaltamenti totali'],
+        datasets:[{data:[60,30,10],
+          backgroundColor:function(ctx){return ctx.dataIndex===0?'#c8a327':'#555'},
+          borderRadius:4}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false}},
+        scales:{x:{ticks:{callback:v=>v+'%'},grid:{color:gridColor}},y:{grid:{display:false}}}}
+    });
   }
   if(tab==='carceri'){
     charts['detenuti'] = buildChart('chart-detenuti', {
@@ -599,6 +643,16 @@ function renderTabCharts(tab){
       data:{labels:['Italia','Spagna','Francia','Germania','Svezia','Paesi Bassi'],datasets:[{label:'Detenuti/100mila',data:[104,123,108,76,66,65],backgroundColor:[accent,grey,grey,grey,grey,grey],borderRadius:4}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>v},grid:{color:gridColor}},x:{grid:{display:false}}}}
     });
+    charts['recidiva'] = buildChart('chart-recidiva', {
+      type:'bar', indexAxis:'y',
+      data:{labels:['Carcere (pena scontata)','Misure alternative'],
+        datasets:[{data:[68,19],
+          backgroundColor:function(ctx){return ctx.dataIndex===0?'#c8a327':'#555'},
+          borderRadius:4}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false}},
+        scales:{x:{ticks:{callback:v=>v+'%'},grid:{color:gridColor}},y:{grid:{display:false}}}}
+    });
   }
 
   if(tab==='risorse'){
@@ -616,6 +670,36 @@ function renderTabCharts(tab){
       type:'bar',
       data:{labels:['DAP/carceri','Personale magistratura e uffici','Funzionamento tribunali','Cassazione/CSM/altro'],datasets:[{data:[30,35,20,15],backgroundColor:[red,blue,gold,grey],borderWidth:0}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
+    });
+    charts['polizia-ue'] = buildChart('chart-polizia-ue', {
+      type:'bar', indexAxis:'y',
+      data:{labels:['Italia','Spagna','Francia','Media UE','Germania'],
+        datasets:[{data:[399,378,371,342,317],
+          backgroundColor:function(ctx){return ctx.dataIndex===0?'#c8a327':'#555'},
+          borderRadius:4}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false}},
+        scales:{x:{ticks:{callback:v=>v},grid:{color:gridColor}},y:{grid:{display:false}}}}
+    });
+    charts['pm-ue'] = buildChart('chart-pm-ue', {
+      type:'bar', indexAxis:'y',
+      data:{labels:['Media UE','Italia'],
+        datasets:[{data:[11.2,3.8],
+          backgroundColor:function(ctx){return ctx.dataIndex===1?'#c8a327':'#555'},
+          borderRadius:4}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false}},
+        scales:{x:{ticks:{callback:v=>v},grid:{color:gridColor}},y:{grid:{display:false}}}}
+    });
+    charts['digitalizzazione'] = buildChart('chart-digitalizzazione', {
+      type:'bar', indexAxis:'y',
+      data:{labels:['Italia','Media UE'],
+        datasets:[{data:[6.49,4.16],
+          backgroundColor:function(ctx){return ctx.dataIndex===0?'#c8a327':'#555'},
+          borderRadius:4}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false}},
+        scales:{x:{max:10,ticks:{callback:v=>v+'/10'},grid:{color:gridColor}},y:{grid:{display:false}}}}
     });
   }
   if(tab==='efficienza'){
