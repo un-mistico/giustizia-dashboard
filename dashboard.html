@@ -528,7 +528,7 @@ function renderTabCharts(tab){
     charts['tipi-reati'] = buildChart('chart-tipi-reati', {
       type:'bar',
       data:{labels:['Furti','Truffe/frodi informatiche','Droga','Lesioni/violenze','Rapine','Altro'],datasets:[{data:[44,12,8,9,2,25],backgroundColor:[red,blue,gold,'#c8a327',accent,grey],borderWidth:0}]},
-      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#aaa',font:{size:11}},reverse:true},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
     });
     charts['tempi-civili-ue'] = buildChart('chart-tempi-civili-ue', {
       type:'bar',
@@ -545,7 +545,7 @@ function renderTabCharts(tab){
     charts['reati-torta'] = buildChart('chart-reati-torta', {
       type:'bar',
       data:{labels:['Furti','Truffe/frodi informatiche','Droga','Lesioni/violenze','Rapine','Altro'],datasets:[{data:[44,12,8,9,2,25],backgroundColor:[red,blue,gold,'#c8a327',accent,grey],borderWidth:0}]},
-      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#aaa',font:{size:11}},reverse:true},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
     });
     charts['reati-var'] = buildChart('chart-reati-var', {
       type:'bar',
@@ -572,7 +572,7 @@ function renderTabCharts(tab){
     charts['esiti'] = buildChart('chart-esiti', {
       type:'bar',
       data:{labels:['Condanne','Assoluzioni','Patteggiamenti','Archiviazioni/estinzioni','Altro'],datasets:[{data:[24,24,18,28,6],backgroundColor:[red,'#c8a327',gold,grey,blue],borderWidth:0}]},
-      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#aaa',font:{size:11}},reverse:true},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
     });
     charts['pendenze-storico'] = buildChart('chart-pendenze-storico', {
       type:'line',
@@ -592,7 +592,7 @@ function renderTabCharts(tab){
     charts['pene'] = buildChart('chart-pene', {
       type:'bar',
       data:{labels:['Pena definitiva','Custodia cautelare','Pena residua < 3 anni','Stranieri','Altro'],datasets:[{data:[52,18,38,27,5],backgroundColor:[red,blue,gold,'#c8a327',grey],borderWidth:0}]},
-      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#aaa',font:{size:11}},reverse:true},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
     });
     charts['carc-ue'] = buildChart('chart-carc-ue', {
       type:'bar',
@@ -615,7 +615,7 @@ function renderTabCharts(tab){
     charts['spesa-comp'] = buildChart('chart-spesa-comp', {
       type:'bar',
       data:{labels:['DAP/carceri','Personale magistratura e uffici','Funzionamento tribunali','Cassazione/CSM/altro'],datasets:[{data:[30,35,20,15],backgroundColor:[red,blue,gold,grey],borderWidth:0}]},
-      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#aaa',font:{size:11}},reverse:true},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.raw+'%'}}}}
     });
   }
   if(tab==='efficienza'){
