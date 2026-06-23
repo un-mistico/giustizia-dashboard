@@ -324,6 +324,7 @@
 
     <div class="chart-grid">
       <div class="chart-box"><h3>PM ogni 100.000 abitanti (CEPEJ 2024)<span class="info-tooltip"><span class="icon">i</span><span class="tooltip-text">L'Italia conta 3,8 pm ogni 100mila abitanti contro una media UE di 11,2. Ma spende 100,6 euro pro capite (sopra la media europea di 85,4). Fonte: CEPEJ 2024.</span></span></h3><div class="chart-container"><canvas id="chart-pm-ue"></canvas></div></div>
+      <div class="chart-box"><h3>Spesa per la giustizia (euro pro capite, CEPEJ 2024)<span class="info-tooltip"><span class="icon">i</span><span class="tooltip-text">L'Italia spende 100,6 euro pro capite per la giustizia, sopra la media europea di 85,4. Totale: 5,9 mld euro, 0,31% PIL. Fonte: CEPEJ 2024.</span></span></h3><div class="chart-container"><canvas id="chart-spesa-procapite"></canvas></div></div>
     </div>
 
     <div class="chart-grid">
@@ -595,12 +596,12 @@ function renderTabCharts(tab){
   if(tab==='processi'){
     charts['tempi-civili'] = buildChart('chart-tempi-civili', {
       type:'bar',
-      data:{labels:['2014','2017','2019','2021','2023','2024'],datasets:[{label:'Anni',data:[8.2,7.6,7.2,6.5,6.1,5.9],backgroundColor:[grey,grey,grey,blue,blue,accent],borderRadius:4}]},
+      data:{labels:['2014','2017','2019','2021','2023','2024'],datasets:[{label:'Anni',data:[8.2,7.6,7.2,6.5,6.1,5.9],backgroundColor:accent,borderRadius:4}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>v+'a'},grid:{color:gridColor}},x:{grid:{display:false}}}}
     });
     charts['tempi-penali'] = buildChart('chart-tempi-penali', {
       type:'bar',
-      data:{labels:['2019','2021','2023','2024','2025'],datasets:[{label:'Anni',data:[3.0,2.9,2.6,2.5,2.4],backgroundColor:[grey,grey,blue,blue,accent],borderRadius:4}]},
+      data:{labels:['2019','2021','2023','2024','2025'],datasets:[{label:'Anni',data:[3.0,2.9,2.6,2.5,2.4],backgroundColor:accent,borderRadius:4}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>v+'a'},grid:{color:gridColor}},x:{grid:{display:false}}}}
     });
     charts['esiti'] = buildChart('chart-esiti', {
@@ -701,11 +702,23 @@ function renderTabCharts(tab){
         plugins:{legend:{display:false}},
         scales:{x:{max:10,ticks:{callback:v=>v+'/10'},grid:{color:gridColor}},y:{grid:{display:false}}}}
     });
+
+    charts['spesa-procapite'] = buildChart('chart-spesa-procapite', {
+      type:'bar', indexAxis:'y',
+      data:{labels:['Italia','Media UE'],
+        datasets:[{data:[100.6,85.4],
+          backgroundColor:function(ctx){return ctx.dataIndex===0?'#c8a327':'#555'},
+          borderRadius:4}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:ctx=>ctx.raw+' euro pro capite'}}},
+        scales:{x:{ticks:{callback:v=>v+' euro'},grid:{color:gridColor}},y:{grid:{display:false}}}}
+    });
   }
   if(tab==='efficienza'){
     charts['denunce-condanna'] = buildChart('chart-denunce-condanna', {
       type:'bar',
-      data:{labels:['Archiviazioni','Assoluzioni','Patteggiamenti','Condanne definitive','Prescritti/altro'],datasets:[{data:[63,24,18,9,6],backgroundColor:[grey,'#c8a327',gold,red,blue],borderRadius:4}]},
+      data:{labels:['Archiviazioni','Assoluzioni','Patteggiamenti','Condanne definitive','Prescritti/altro'],datasets:[{data:[63,24,18,9,6],backgroundColor:accent,borderRadius:4}]},
       options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.raw+'%'}}},scales:{x:{beginAtZero:true,ticks:{callback:v=>v+'%'},grid:{color:gridColor}},y:{grid:{display:false}}}}
     });
     charts['costo-efficienza'] = buildChart('chart-costo-efficienza', {
